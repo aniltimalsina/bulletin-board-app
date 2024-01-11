@@ -1,7 +1,8 @@
 import { useSelector } from "react-redux";
+import { selectAllPosts } from "./postsSlice";
 
 const PostsList = () => {
-  const post = useSelector((state) => state.posts);
+  const post = useSelector(selectAllPosts);
   return (
     <section>
       <h2>Posts</h2>

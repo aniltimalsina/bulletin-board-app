@@ -14,8 +14,13 @@ const postsSlice = createSlice({
       content: "The more I say Slice, the more I get confused",
     },
   ],
-  reducers: {},
+  reducers: {
+    postAdded(state, action) {
+      state.push(action.payload);
+    },
+  },
 });
 
-export const {} = postsSlice.actions;
+export const selectAllPosts = (state) => state.posts;
+export const { postAdded } = postsSlice.actions;
 export default postsSlice.reducer;
